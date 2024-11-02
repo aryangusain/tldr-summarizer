@@ -10,12 +10,15 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "TLDR Summarizer",
-  description: "Summarize Text",
+  description: "Summarize Text, Read More",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.className + " " + "dark"}>
+      <head>
+        <link rel='icon' href='/favicon.ico' />
+      </head>
       <body className='p-0 m-0 flex flex-col justify-center items-center h-screen [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-gray-700 [&::-webkit-scrollbar-thumb]:rounded-full'>
         <div className="w-full absolute inset-0 h-screen -z-10">
           <SparklesCore

@@ -17,7 +17,6 @@ function Home() {
     setLoading(true);
     setOutputText('');
     setInputText(e.target.inputText.value);
-    console.log(inputText);
 
     try {
       const response = await fetch('/api/summarize', {
@@ -26,7 +25,7 @@ function Home() {
         body: JSON.stringify({ inputText }),
       });
       const data = await response.json();
-      await setOutputText(data.text);
+      setOutputText(data.text);
       console.log(outputText)
     } 
     catch (error) {
