@@ -4,10 +4,10 @@ import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({
-  words,
+  words = '',
   className,
   filter = true,
-  duration = 0.5
+  duration = 0.2
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
@@ -19,11 +19,11 @@ export const TextGenerateEffect = ({
       duration: duration ? duration : 1,
       delay: stagger(0.2),
     });
-  }, [scope.current]);
+  }, [scope.current, words]);
 
   const renderWords = () => {
     return (
-      (<motion.div ref={scope}>
+      (<motion.div ref={scope} key={words}>
         {wordsArray.map((word, idx) => {
           return (
             (<motion.span

@@ -6,7 +6,7 @@ import React from 'react'
 
 function SignIn() {
   return (
-    <div className='flex flex-col gap-8 items-center'>
+    <div className='flex flex-col gap-8 items-center opacity-1'>
         <Logo></Logo>
         <div className='flex flex-col gap-6'>
             <div className='w-full flex flex-col gap-3 items-center'>

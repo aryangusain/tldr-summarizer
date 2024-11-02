@@ -3,7 +3,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className='flex flex-col items-center gap-2 lg:text-base md:text-sm text-xs'>
+    <footer className='flex flex-col items-center gap-2 lg:text-base md:text-sm text-xs mt-16'>
         <div className='flex gap-4 justify-center items-center'>
           {/* Github */}
             <Link href="https://github.com/aryangusain" target='_blank'>
